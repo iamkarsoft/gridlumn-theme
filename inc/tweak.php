@@ -25,7 +25,7 @@ add_filter('wp_page_menu_args','gridlumn_page_menu_args');
 *@since gridlumn 1.0
 */
 
-function gridlumn_body_classes($classes)
+function gridlumn_body_classes($classes){
     //adds a class of group if post has more authors
 
     if(is_multi_author()){
