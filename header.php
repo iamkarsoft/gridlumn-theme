@@ -43,6 +43,42 @@
 
            <body <?php body_class(); ?> >
 
+           <div class="navbar">
+            <div class="navbar-header">
+                <div class="navbar-brand"><?php bloginfo('name'); ?></div>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+           				<div class="collapse navbar-collapse">
+           					<ul>
+
+           					<?php
+           					if ( has_nav_menu( 'primary' ) ) {
+                wp_nav_menu( array( 'theme_location' => 'primary-menu' ,
+                	) );
+           } else{
+
+           	$defaults= array(
+           							'container'=>false,
+           							'theme_location'=>'primary-menu',
+           							'menu_class'=>'nav navbar-nav',
+           							'fallback_cb' => 'gridlumn_menu_fallback',
+           						);
+           					wp_nav_menu($defaults);
+
+           				}
+
+           						?>
+
+
+           					</ul>
+
+           				</div>
+           		</div>
+
 
 
 

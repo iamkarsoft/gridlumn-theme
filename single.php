@@ -12,6 +12,11 @@
     <?php endwhile; ?>
 
     <?php endif; ?>
+        <?php
+            //calling the sidebar page
+            get_sidebar('sidebar');
+
+          ?>
 
 
 

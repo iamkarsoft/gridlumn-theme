@@ -66,15 +66,44 @@ function gridlumn_theme_styles(){
 	wp_enqueue_style('bootstrap-css',get_template_directory_uri().'/css/bootstrap.min.css');
 	wp_enqueue_style('other-css',get_template_directory_uri().'/css/style.css');
 	// adding javascript files to the function
-  			wp_enqueue_script('bootsrap-js',get_template_directory_uri().'js/bootstrap.min.js',array('jquery'),'',false);
-  	   wp_enqueue_script('gridlumn-customizer',get_template_directory_uri().'js/theme-customizer.js',array("jquery", "customize-preview"),'',false);
+  			wp_enqueue_script('bootsrap-js',get_template_directory_uri().'/js/bootstrap.min.js',array('jquery'),'',false);
+  	   wp_enqueue_script('gridlumn-customizer',get_template_directory_uri().'/js/theme-customizer.js',array("jquery", "customize-preview"),'',false);
 }
 add_action('wp_enqueue_scripts','gridlumn_theme_styles');
 
 //adding image size to functions
 add_image_size( $name, $width, $height, $crop);
 
+/**
+*gridlumn navigation fall back
+*/
+   function gridlumn_menu_fallback() {
+     // callback code goes here
+     // you can even output wp_list_categories() if you want
 
+      echo '<div class="collapse navbar-collapse"><div class="nav navbar-nav"><li><a href="'.home_url().'/wp-admin/nav-menus.php">Add New Menu </a></li></div></div>';
+
+
+};
+
+
+/**
+*gridlumn widgets and sidebar registration
+*/
+function gridlumn_widgets_init(){
+
+    register_sidebar( array(
+        'name' => __( 'Sidebar Widget', 'gridlumn' ),
+        'id' => 'sidebar',
+  'before_widget'=>'<div class="widgets">',
+      'after_widget'=>'</div>',
+
+      'before_title'=>'<h1 class="widget-title">',
+      'after_title'=>'</h1>'
+    ) );
+
+    }
+add_action( 'widgets_init', 'gridlumn_widgets_init' );
 
 //creating read more links
 

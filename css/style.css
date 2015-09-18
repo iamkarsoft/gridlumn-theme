@@ -1,0 +1,36 @@
+
+body {
+    background: #ffffff;
+
+}
+
+.navbar {
+    border-bottom: 4px solid #000000;
+
+}
+
+.icon-bar {
+    background: #000000;
+}
+
+.navbar-toggle {
+    border: 1px solid #000000;
+}
+
+.grid-thumbnail {
+
+}
+
+.grid-title a {
+
+    color: #000000;
+}
+
+.grid-summary {
+
+}
+
+.grid-post {
+    padding: 3% 13% 3% 13%;
+
+}

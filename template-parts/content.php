@@ -11,10 +11,10 @@
 
 
 			<?php if ( 'post' == get_post_type() ) : ?>
-			<div class=" col-sm-12 col-md-12  ">
+			<div class=" col-sm-12 col-md-12 grid-post">
 			
 				
-						<div class=" col-md-5">
+						<div class=" col-md-5 grid-thumbnail">
 					<?php	if(has_post_thumbnail()): ?>
 						 <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(array(250,250)) ?></a> 
 
@@ -24,8 +24,8 @@
 					<?php endif; ?>
 						</div>
 						
-						<div class="col-md-7">
-					<h1 class=""> <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a> </h1>
+						<div class="col-md-7 grid-summary">
+					<h1 class="grid-title"> <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a> </h1>
 					
 					<div syle="padding:1%">
 					 <div > <?php the_excerpt(); ?> </div>
