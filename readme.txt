@@ -13,7 +13,7 @@ A simple theme called gridlumn
 
 == Description ==
 
-Hi. I'm a starter theme called gridlumn . I'm a simple theme built using twitter bootstrap.
+Hi I'm a simple theme built using twitter bootstrap.
 
 == Installation ==
 	
@@ -29,7 +29,7 @@ Gridlumn does not support any plugins yet.
 
 == Changelog ==
 
-= 1.0 - 9th September 2015 =
+= 1.0 - 30th September 2015 =
 * Initial release
 
 == Credits ==

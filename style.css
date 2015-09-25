@@ -1,16 +1,14 @@
-/**
-Theme Name: Gridlumn
-Theme URI: 
-Author: Koofi
-Author URI:http://www.kofi.work
-Description: A Simple theme built by kofi for the purpose of blogging. This theme is built on twitter bootstrap theme making it responsive . It's light with no fancy visuals and focuses on the content and the audiance you are trying to reach with an option
-between one column or two-column pages with a sidebar widget area.
-Version:1.0
-License: GNU
-License URI: license.txt,
-Tags:black,white,one-column, two-columns,sidebar,custom background, custom logo
-
-
+/*
+Theme Name: Gridlumn 
+Theme URI: http://kofi.work/gridlumn
+Author: Kofi
+Author URI: http://kofi.work/
+Description: A Simple theme built by kofi for the purpose of blogging. This theme is built on twitter bootstrap framework making it responsive . It's light with no fancy visuals and focuses on the content and the audience you are trying to reach with an option between one column or two-column pages with a sidebar widget area,
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, two-columns, right-sidebar,
+Text Domain: gridlumn,
 
 */
 
@@ -198,4 +196,8 @@ a img.aligncenter {
     top: 5px;
     width: auto;
     z-index: 100000; /* Above WP toolbar. */
+}
+
+.sticky, .gallery-caption, .bypostauthor {
+    display: block;
 }

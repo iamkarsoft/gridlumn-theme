@@ -1,36 +1,153 @@
+@font-face {
+    font-family: 'cubano-regular-webfont';
+    src: url('../fonts/cubano-regular-webfont.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
 
 body {
     background: #ffffff;
+    font-family: 'Roboto-Light', helvetica, times, sans-serif;
+
 
 }
 
 .navbar {
     border-bottom: 4px solid #000000;
+    border-top: 4px solid #000000;
+    background: #fbfcfc;
+    font-family: 'cubano-regular-webfont', helvetica, times, sans-serif;
+}
 
+.site-logo, .logo {
+
+    background: #fbfcfc;
+}
+
+.footer {
+    border-top: 4px solid #000000;
+    background: #fbfcfc;
+
+    padding: 2%;
+}
+
+.footer a {
+    color: #000000;
+
+}
+
+li {
+    list-style: none;
 }
 
 .icon-bar {
     background: #000000;
 }
 
+.navbar-brand {
+    color: #000000;
+}
+
+.navbar a {
+    color: #000000;
+}
+
+.current-menu-item a, .current_page_item a {
+    font-size: larger;
+    font-style: bolder;
+    color: #000000
+}
+
+.current-menu-item > a {
+    background-color: #000;
+    color: #ffffff;
+
+}
+
+img {
+    max-width: 100%;
+}
+
 .navbar-toggle {
     border: 1px solid #000000;
 }
+
 
 .grid-thumbnail {
 
 }
 
-.grid-title a {
-
+.grid-title a, .grid-title, .related-post a {
+    font-family: 'cubano-regular-webfont', helvetica, times, sans-serif;
     color: #000000;
 }
 
+.gridlumn-content p {
+    font-size: large
+}
+
+.related-post {
+    height: 150px;
+}
 .grid-summary {
 
 }
 
+/*.navbar{*/
+/*background:#000000;*/
+/*}*/
+
+/*.navbar a{*/
+
+/*color: #ffffff;*/
+/*}*/
 .grid-post {
     padding: 3% 13% 3% 13%;
+}
 
+.grid-summary .btn, .pagination-btn {
+    color: #ffffff;
+    background: #000000;
+    font-size: larger;
+}
+
+.grid-summary a:hover, .footer .widget-title a:hover, .footer .widget-title li a:hover {
+    text-decoration: none;
+    color: #ffa800;
+}
+
+.widgets {
+    background: #f3f7fa;
+    margin-bottom: 3%;
+    border: #e9e9e9;
+    padding: 2% 5% 2% 5%;
+
+}
+
+.copyright {
+
+    font-family: 'cubano-regular-webfont', helvetica, times, sans-serif;
+}
+
+.footer .widgets {
+
+    padding: 2%;
+    background: #fbfcfc
+}
+
+.footer .widget-title {
+    font-size: normal
+}
+
+.grid-summary .btn a:hover {
+    text-decoration: none;
+    color: #ffa800;
+}
+
+.ess-buttons {
+    list-style: inline;
 }

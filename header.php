@@ -16,36 +16,36 @@
     <head>
         <meta charset="<?php bloginfo('charset'); ?>" />
         <meta name="viewport" content="width=device-width" />
-    <title>
-       <?php
-        /**
-        *navigation style using wordpress navigation menu
-        */
-    global $page, $paged;
-        wp_title('|',true,'right');
 
-        //adding blog name
-        bloginfo('name');
-        $site_description=get_bloginfo('description','display');
 
-        if($site_description && (is_home()|| is_front_page())){
-            echo "/$site_description";
-
-          //adding a page number if necessary
-          if($paged >=2 || $page>=2)
-
-          echo '/'.sprint(__('Page%s','gridlumn'),
-                        max($paged,$page));
-}
-           ?> </title>
-
-           <?php wp_head() ?>
+           <?php 
+if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
+           wp_head() ?>
 
            <body <?php body_class(); ?> >
 
-           <div class="navbar">
+           <!-- custom header -->
+
+             <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+    <div class='site-logo logo '>
+    <div>
+        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' class="center-block" alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+
+    </div>
+    <div class="center-block text-center">
+    <h3 class="col-md-offset-5 center-block"> <?php bloginfo('description') ?></h3>
+    </div>
+    </div>
+<?php else : ?>
+ 
+<?php endif; ?>
+
+           <div class="navbar ">
             <div class="navbar-header">
+             <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+              <?php else : ?>
                 <div class="navbar-brand"><?php bloginfo('name'); ?></div>
+                <?php endif; ?>
                 <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>

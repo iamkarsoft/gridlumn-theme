@@ -1,5 +1,13 @@
 <?php
-    get_header(); ?>
+    get_header(); 
+
+/*Template Name:Page no sidebar
+*template part for displaying file in page.php
+*
+*@package gridlumn
+*/
+
+    ?>
 
 <div class="container">
 

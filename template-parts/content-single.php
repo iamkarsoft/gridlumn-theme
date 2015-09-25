@@ -7,11 +7,11 @@
 
 
   ?>
-  			<div class="col-md-8">
+  			<div class="col-md-8 gridlumn-content">
 	
 			<div class="col-md-12">
 					<div class="col-md-12">
-					<h1 class="grid-title">  <?php the_title() ?>  </h1>
+					<h1 class="grid-title text-center">  <?php the_title() ?>  </h1>
 				
 
 					<?php the_content(); ?>
