@@ -147,22 +147,22 @@ add_image_size( $name, $width, $height, $crop);
 /**
 *gridlumn custom logo
 */
-  function themeslug_theme_customizer( $wp_customize ) {
+  function gridlumn_theme_customizer( $wp_customize ) {
     // Fun code will go here
   
-  $wp_customize->add_section( 'themeslug_logo_section' , array(
-    'title'       => __( 'Logo', 'themeslug' ),
+  $wp_customize->add_section( 'custom-logo' , array(
+    'title'       => __( 'Logo', 'gridlumn' ),
     'priority'    => 30,
     'description' => 'Upload a logo to replace the default site name and description in the header',
 ) );
 
-$wp_customize->add_setting( 'themeslug_logo','sanitize_callback' == 'esc_url_raw' );
+$wp_customize->add_setting( 'gridlumn-logo','sanitize_callback' == 'esc_url_raw' );
 
 
-$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'themeslug_logo', array(
-    'label'    => __( 'Logo', 'themeslug' ),
-    'section'  => 'themeslug_logo_section',
-    'settings' => 'themeslug_logo',
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'custom-logo', array(
+    'label'    => __( 'Upload Logo', 'gridlumn' ),
+    'section'  => 'custom-logo',
+    'settings' => 'gridlumn-logo',
     'sanitize_callback' == 'esc_url_raw'
 ) ) );
 
@@ -170,7 +170,7 @@ $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'them
 
 
 }
-add_action( 'customize_register', 'themeslug_theme_customizer' );
+add_action( 'customize_register', 'gridlumn_theme_customizer' );
 
 
 
