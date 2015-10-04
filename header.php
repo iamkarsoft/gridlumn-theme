@@ -63,7 +63,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
            	$defaults= array(
            							'container'=>false,
-           							'theme_location'=>'primary-menu',
+           							'menu'=>'primary-menu',
            							'menu_class'=>'nav navbar-nav',
            							'fallback_cb' => 'gridlumn_menu_fallback',
            						);
@@ -78,7 +78,4 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
            				</div>
            		</div>
-
-
-
 
