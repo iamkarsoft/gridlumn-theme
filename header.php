@@ -26,10 +26,10 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
            <!-- custom header -->
 
-             <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+             <?php if ( get_theme_mod( 'gridlumn-logo' ) ) : ?>
     <div class='site-logo logo '>
     <div>
-        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'themeslug_logo' ) ); ?>' class="center-block" alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+        <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'gridlumn-logo' ) ); ?>' class="center-block" alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
 
     </div>
     <div class="center-block text-center">
