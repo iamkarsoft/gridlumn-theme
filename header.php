@@ -42,7 +42,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
            <div class="navbar ">
             <div class="navbar-header">
-             <?php if ( get_theme_mod( 'themeslug_logo' ) ) : ?>
+             <?php if ( get_theme_mod( 'gridlumn-logo' ) ) : ?>
               <?php else : ?>
                 <div class="navbar-brand"><?php bloginfo('name'); ?></div>
                 <?php endif; ?>
