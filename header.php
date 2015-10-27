@@ -18,9 +18,11 @@
         <meta name="viewport" content="width=device-width" />
 
 
-           <?php 
+           <?php
 if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
            wp_head() ?>
+
+    </head>
 
            <body <?php body_class(); ?> >
 
@@ -37,7 +39,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
     </div>
     </div>
 <?php else : ?>
- 
+
 <?php endif; ?>
 
            <div class="navbar ">
@@ -78,4 +80,3 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
 
            				</div>
            		</div>
-

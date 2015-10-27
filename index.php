@@ -2,20 +2,12 @@
     get_header(); ?>
 
 <div class="container">
-    
+
     <!-- -->
-    
 
-	<?php 
 
-    			$sticky = get_option( 'sticky_posts' );
-				$query = new WP_Query( 'p=' . $sticky[0] );
-				$args = array(
-					'posts_per_page' => 1,
-					'post__in'  => get_option( 'sticky_posts' ),
-					'ignore_sticky_posts' => 1
-				);
-				$query = new WP_Query( $args );
+	<?php
+
 
 				$sticky = get_option( 'sticky_posts' );
 					$args = array(
@@ -26,27 +18,27 @@
 					$query = new WP_Query( $args );
 					if ( isset($sticky[0]) ) { ?>
 						<div class=" col-sm-12 col-md-12 grid-post gridlumn-content jumbotron">
-			
-				
+
+
 						<div class=" col-md-5 grid-thumbnail">
 					<?php	if(has_post_thumbnail()): ?>
-						 <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(array(250,250)) ?></a> 
+						 <a href="<?php the_permalink(); ?>"> <?php the_post_thumbnail(array(250,250)) ?></a>
 
 					<?php else: ?>
 						<a href="<?php the_permalink() ?>"><img src="<?php echo esc_url( get_template_directory_uri() ) ?>/images/no-thumbnail.png" class="img-responsive"> </a>
 
 					<?php endif; ?>
 						</div>
-						
+
 						<div class="col-md-7 grid-summary">
 					<h1 class="grid-title"> <a href="<?php the_permalink() ?>"> <?php the_title() ?> </a> </h1>
-					
+
 					<div syle="padding:1%">
 					 <div > <?php the_excerpt(); ?> </div>
 					</div>
-					
+
 						</div>
-				
+
 			</div><!-- /-->
 					<?php }
 
@@ -56,7 +48,7 @@
 
     <?php while(have_posts()) : the_post(); ?>
 
-    		
+
 
                 <?php get_template_part('template-parts/content'); ?>
 
@@ -82,8 +74,8 @@
 				<div class="col-md-4 ">
 
 		    	</div>
-               
-    
+
+
 </div>
 
     <?php endif; ?>
