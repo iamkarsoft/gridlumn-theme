@@ -151,3 +151,9 @@ img {
 .ess-buttons {
     list-style: inline;
 }
+.menu-item{
+  z-index: 1;
+}
+.dropdown-menu{
+  z-index:7000;
+}

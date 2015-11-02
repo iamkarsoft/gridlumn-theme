@@ -1,4 +1,4 @@
-<?php  
+<?php
 /*
 *gridlumn function and definitions
 *@package gridlumn
@@ -21,6 +21,7 @@ function gridlumn_setup(){
 */
 require (get_template_directory().'/inc/tweak.php');
 
+
 /**
 *Making theme available for translation
 */
@@ -41,6 +42,10 @@ add_action( 'admin_init', 'gridlumn_add_editor_styles' );
 *Enable Custom header support
 */
 
+//adding custom functions walker class added for dropdown
+require_once dirname(__File__).'/wp_bootstrap_navwalker.php';
+
+
  // add_theme_support( "custom-header", $args );
 
  /**
@@ -48,8 +53,8 @@ add_action( 'admin_init', 'gridlumn_add_editor_styles' );
 */
  add_theme_support( 'post-thumbnails' );
 
-                
-   
+
+
   $defaults = array(
     'before'           => '<p>' . __( 'Pages:','gridlumn' ),
     'after'            => '</p>',
@@ -62,8 +67,8 @@ add_action( 'admin_init', 'gridlumn_add_editor_styles' );
     'pagelink'         => '%',
     'echo'             => 1
   );
- 
-   
+
+
 
 
 /**
@@ -149,7 +154,7 @@ add_image_size( $name, $width, $height, $crop);
 */
   function gridlumn_theme_customizer( $wp_customize ) {
     // Fun code will go here
-  
+
   $wp_customize->add_section( 'custom-logo' , array(
     'title'       => __( 'Logo', 'gridlumn' ),
     'priority'    => 30,
@@ -182,12 +187,12 @@ add_action( 'customize_register', 'gridlumn_theme_customizer' );
     add_theme_support('menus');
 
 
-  
+
      /**
     * Registering of widgets
     *@since gridlumn 1.0
     */
-    
+
     /**
 *gridlumn widgets and sidebar registration
 */
@@ -325,5 +330,3 @@ function gridlumn_related_posts(){
 }
 endif;
 add_action('after_setup_theme','gridlumn_setup');
-
-

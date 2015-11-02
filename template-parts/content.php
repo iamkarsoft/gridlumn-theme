@@ -10,6 +10,8 @@
 
 
 
+
+
 			<?php if ( 'post' == get_post_type() ) : ?>
 			<div class=" col-sm-12 col-md-12 grid-post gridlumn-content">
 

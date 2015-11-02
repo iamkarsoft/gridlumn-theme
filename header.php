@@ -54,8 +54,8 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
                     <span class="icon-bar"></span>
                 </button>
             </div>
-           				<div class="collapse navbar-collapse">
-           					<ul>
+           				<div class="collapse navbar-collapse col-md-12 text-center">
+
 
            					<?php
            					if ( has_nav_menu( 'primary' ) ) {
@@ -67,6 +67,7 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
            							'container'=>false,
            							'menu'=>'primary-menu',
            							'menu_class'=>'nav navbar-nav',
+                          'walker'=> new  wp_bootstrap_navwalker,
            							'fallback_cb' => 'gridlumn_menu_fallback',
            						);
            					wp_nav_menu($defaults);
@@ -76,7 +77,6 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
            						?>
 
 
-           					</ul>
 
            				</div>
            		</div>
