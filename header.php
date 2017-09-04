@@ -40,42 +40,26 @@ if ( is_singular() ) wp_enqueue_script( 'comment-reply' );
  
 <?php endif; ?>
 
-           <div class="navbar ">
-            <div class="navbar-header">
-             <?php if ( get_theme_mod( 'gridlumn-logo' ) ) : ?>
+<section id="navigation" class="navbar">
+          <div class="navbar-header ">
+               <?php if ( get_theme_mod( 'gridlumn-logo' ) ) : ?>
               <?php else : ?>
                 <div class="navbar-brand"><?php bloginfo('name'); ?></div>
                 <?php endif; ?>
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-           				<div class="collapse navbar-collapse">
-           					<ul>
+               <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
 
-           					<?php
-           					if ( has_nav_menu( 'primary' ) ) {
-                wp_nav_menu( array( 'theme_location' => 'primary-menu' ,
-                	) );
-           } else{
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+           </div>
+                  <div class="collapse navbar-collapse  col-md-12 text-center">
+                      <?php wp_nav_menu( array( 'theme_location' => 'primary',  'container'=>false,
+                        'menu'=>'primary-menu',
+                        'menu_class'=>'nav navbar-nav ', 'walker'=> new  wp_bootstrap_navwalker ) ); ?>
+                     
 
-           	$defaults= array(
-           							'container'=>false,
-           							'menu'=>'primary-menu',
-           							'menu_class'=>'nav navbar-nav',
-           							'fallback_cb' => 'gridlumn_menu_fallback',
-           						);
-           					wp_nav_menu($defaults);
+                    </div>
+</section>
 
-           				}
-
-           						?>
-
-
-           					</ul>
-
-           				</div>
-           		</div>
 

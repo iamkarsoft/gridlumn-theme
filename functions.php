@@ -21,6 +21,9 @@ function gridlumn_setup(){
 */
 require (get_template_directory().'/inc/tweak.php');
 
+//adding walker class to functions for responsive
+  require_once dirname(__File__).'/wp_bootstrap_navwalker.php';
+
 /**
 *Making theme available for translation
 */

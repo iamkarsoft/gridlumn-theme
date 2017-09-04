@@ -1,13 +1,13 @@
 <?php 
 /**
 *Plugin Name: gridlumn Related Post
-*Plugin URI:http://kofi.worl/tutorials
+*Plugin URI:http://kofi.work/
 *description:Plugin to display recent post
 *Author: Koofi
 *Author URI:http://kofi.work
 *Licence:
 *License URI:
-*Text Domain: donnover
+*Text Domain: gridlumn
 */
 
 
